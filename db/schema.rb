@@ -23,3 +23,12 @@
     t.integer "comments_counter"
     t.index ["author_id"], name: "index_posts_on_author_id"
   end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.string "photo"
+    t.string "bio"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "post_count"
+  end
