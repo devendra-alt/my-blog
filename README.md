@@ -16,46 +16,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Blog <a name="about-project"></a>
+# 📖 My blog <a name="about-project"></a>
 
-**My Blog** is a ruby on rails MVC website application
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
-
-<details>
-<summary>Ruby</summary>
-  <ul>
-    <li><a href="https://rubygems.org">Ruby</a></li>
-  </ul>
-</details>
-
-<!-- Features -->
-
-### Key Features <a name="key-features"></a>
-
-# 📗 Table of Contents
-
-- [📗 Table of Contents](#-table-of-contents)
-- [📖 TDD Solver ](#-tdd-solver-)
-  - [🛠 Built With ](#-built-with-)
-    - [Tech Stack ](#tech-stack-)
-    - [Key Features ](#key-features-)
-  - [💻 Getting Started ](#-getting-started-)
-    - [Setup](#setup)
-  - [👥 Authors ](#-authors-)
-  - [🔭 Future Features ](#-future-features-)
-  - [🤝 Contributing ](#-contributing-)
-  - [⭐️ Show your support ](#️-show-your-support-)
-  - [🙏 Acknowledgments ](#-acknowledgments-)
-  - [📝 License ](#-license-)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 TDD Solver <a name="about-project"></a>
-
-**TDD Solver** implements a class with some methods did by test-driven development (TDD)
+**My blog** is ruby on rails MVC website
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -73,9 +36,9 @@
 ### Key Features <a name="key-features"></a>
 
 - **Multiuser**
-- **Blog posts**
-- **Comments and Likes**
-
+- **Blog Posts**
+- **Likes and Comments**
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -89,7 +52,7 @@ Clone this repository to your desired folder:
 Example commands:
 
 ```sh
-  git clone git@github.com:devendra-alt/my-blog.git
+  git clone https://github.com/devendra-alt/my-blog.git
   cd my-blog
 ```
 
@@ -110,7 +73,7 @@ Example commands:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **AWS**
+- [ ] **Front-end UI**
 
 <!-- CONTRIBUTING -->
 
@@ -126,7 +89,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project kindly give stars.
+If you like this project kindly give star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,7 +97,7 @@ If you like this project kindly give stars.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse and my peers.
+I want to thank Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -142,4 +105,3 @@ I would like to thank Microverse and my peers.
 
 ## 📝 License <a name="license"></a>
 This project is [MIT](./MIT.md) licensed.
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
