@@ -23,4 +23,12 @@ RSpec.describe Comment, type: :model do
   it 'comment post id should be same' do
     expect(comment.post.id).to be(post.id)
   end
+  it 'should be invalid on negetive comment counter' do
+    comment.post.comments_count = -1
+    expect(comment.post).to_not be_valid
+  end
+  it 'should be invalid on non negetive comment counter' do
+    comment.post.comments_count = 'test'
+    expect(comment.post).to_not be_valid
+  end
 end
