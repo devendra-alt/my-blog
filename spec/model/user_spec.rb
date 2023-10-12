@@ -21,4 +21,12 @@ RSpec.describe User, type: :model do
     expect(post.user.posts_count).to be(1)
     expect(post.user.posts.size).to be(1)
   end
+  it 'should be invalid on non integer post counter' do
+    user.posts_count = 'dd'
+    expect(user).to_not be_valid
+  end
+  it 'should be invalid for  negetive integer post counter' do
+    user.posts_count = -1
+    expect(user).to_not be_valid
+  end
 end
