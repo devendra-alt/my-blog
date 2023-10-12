@@ -55,6 +55,30 @@ Example commands:
   git clone https://github.com/devendra-alt/my-blog.git
   cd my-blog
 ```
+### Install
+
+Install this project with:
+
+```sh
+  cd my-blog
+  bundle install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```
+  rails serve
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  rspec --format documentation
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
