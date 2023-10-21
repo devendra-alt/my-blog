@@ -1,1 +1,12 @@
-hello posts
+<div class="post-page">
+  <div class="post-page-header">
+    <h2>
+      Post #<%=@post.id%> by <%=@post.title%>
+    </h2>
+    <p>Comments: <%=@post.comments_count%>, Likes: <%=@post.likes_count%></p>
+  </div>
+  <p class="post-para">
+    <%=@post.text%>
+  </p>
+    <%= render partial: 'comments/comment', locals:{comments:@post.recent_comment,users:@users}%>
+</div>

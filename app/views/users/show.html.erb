@@ -1,1 +1,14 @@
-<h1>Hello World!</h1>
+<div id="user-profile">
+  <%= render partial:'user', locals:{user: @user} %>
+  <div class="user-bio">
+    <h2>Bio</h2>
+    <%= @user.bio %>
+  </div>
+  <div class="user-profile">
+    <% if @user.posts_count.positive?%>
+      <% @user.recent_posts.each_with_index do |post,index| %>
+        <%= render partial: 'posts/post', locals:{post:post,index:index} %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
