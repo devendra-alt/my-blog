@@ -6,7 +6,7 @@
   </div>
   <div class="user-profile">
     <% if @user.posts_count.positive?%>
-      <% @posts.each_with_index do |post,index| %>
+      <% @user.recent_posts.each_with_index do |post,index| %>
         <%= render partial: 'posts/post', locals:{post:post,index:index} %>
       <% end %>
     <% end %>
