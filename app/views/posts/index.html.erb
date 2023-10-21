@@ -1,9 +1,40 @@
-<div id="user-posts">
-  <%= render partial:'users/user',locals:{user:@user} %>
-  <% @posts.each_with_index do |post,index| %>
-    <%= render partial: 'posts/post', locals:{post:post,index:index} %>
-    <%= render partial: 'comments/comment', locals:{comments:post.recent_comment,users:@users}%>
-  <%end%>
-  <div class="pagination"><%= will_paginate @posts %></div>
-</div>
+<section id='posts'>
+  <h1 class='title'>Posts</h1>
 
+  <div>
+    <%# User Card %>
+    <%= render partial: 'user', locals: { user: @user } %>
+
+    <%# Bio Card %>
+    <%= render partial: 'bio', locals: { user: @user } %>
+
+    <h2 class='noPosts'><a href="/users/<%=@user.id%>/posts/new">Create a post</a></h2>
+    <br>
+    <%# Posts %>
+    <div class='indexPostList'>
+      <%if @posts.count > 0%>
+        <% @posts.each do |post| %>
+          <div class='indexPost'>
+            <%# Post summary %>
+            <%= render partial: 'post', locals: { user: @user, post: post } %>
+
+            <%# Recent Coments %>
+            <%if post.recent_comment.count > 0%>
+              <ul class='comments'>
+                <% post.recent_comment.each do |comment| %>
+                  <%commentor = @users.find(comment.user_id)%>
+                  <li><%=commentor.name%>: <%=comment.text%></li>
+                <%end%>
+              </ul>
+            <%else%>
+              <h4 class='noComments'>Be the first to comment</h4>
+            <%end%>
+          </div>
+        <%end%>
+      <%else%>
+        <h2 class='noPosts'><%=@user.name%> has no posts</h2>
+      <%end%>
+    </div>
+  </div>
+  <%= will_paginate @posts %>
+</section>
