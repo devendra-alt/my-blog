@@ -1,0 +1,5 @@
+<div class="user-comments">
+  <% comments.each do |comment| %>
+  <p class="commenter"><%= users.find(comment.user_id)['name'] %>: <%=comment.text%> </p>
+  <%end%>
+</div>
