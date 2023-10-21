@@ -1,12 +1,29 @@
-<div class="post-page">
-  <div class="post-page-header">
-    <h2>
-      Post #<%=@post.id%> by <%=@post.title%>
-    </h2>
-    <p>Comments: <%=@post.comments_count%>, Likes: <%=@post.likes_count%></p>
+<section id='article'>
+  <h1 class= 'title'>Article</h1>
+
+  <div class='articlePage'>
+
+    <div class='articleText'>
+      <h3><%=@post.title%></h3>
+      <p class='postMetrics'>Comments: <%=@post.comments_count%>, Likes: <%=@post.likes_count%></p>
+      <p><%=@post.text%></p>
+    </div>
+    <br>
+    <%= render partial: 'like', locals: { like: @like, user: @user, post: @post } %>
+    <%if @comments.count > 0%>
+      <ul class='comments'>
+        <% @comments.each do |comment| %>
+          <%commentor = @users.find(comment.user_id)%>
+          <li><%=commentor.name%>: <%=comment.text%></P>
+        <%end%>
+      </ul>
+      <br>
+      <%= render partial: 'comment', locals: { comment: @comment, current_user: @current_user, post: @post } %>
+    <%else%>
+      <h4 class='noComments'>Be the first to comment</h4>
+      <br>
+      <%= render partial: 'comment', locals: { comment: @comment, current_user: @current_user, post: @post } %>
+    <%end%>
   </div>
-  <p class="post-para">
-    <%=@post.text%>
-  </p>
-    <%= render partial: 'comments/comment', locals:{comments:@post.recent_comment,users:@users}%>
-</div>
+</section>
+<h4 class='returnToPosts'><a href="/users/<%=@post.author_id%>/posts">Back to posts</a></h4>
