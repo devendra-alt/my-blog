@@ -14,13 +14,13 @@
  *= require_self
  */
 
+body ::-webkit-scrollbar {
+  display: none;
+}
+
 :root {
   font-family: sans-serif;
   background: #d6d6d6;
-}
-
-body ::-webkit-scrollbar {
-  display: none;
 }
 
 .user-card {
@@ -93,10 +93,12 @@ body ::-webkit-scrollbar {
   .user-card {
     flex-direction: row;
   }
+
   .user-card > img {
     flex: 1;
     width: 30%;
   }
+
   .user-details {
     flex: 3;
   }
@@ -107,6 +109,7 @@ body ::-webkit-scrollbar {
     width: 20%;
     flex: 1;
   }
+
   .user-details {
     flex: 3;
   }
